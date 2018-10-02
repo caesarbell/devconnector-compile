@@ -1,9 +1,10 @@
-verison: '3'
+version: '3'
 
 services: 
   devconnector-api:
     build: ./devconnector-api
-    commnd: npm run dev
+    command: npm run dev
+    env_file: ./devconnector-api/.env
     ports: 
       - 5000:5000
     volumes: 
