@@ -1,0 +1,27 @@
+verison: '3'
+
+services: 
+  devconnector-api:
+    build: ./devconnector-api
+    commnd: npm run dev
+    ports: 
+      - 3000:3000
+    volumes: 
+      - ./devconnector-api:/usr/src/app
+      - api_modules:/usr/src/app/node_modules
+
+  devconnector-app:
+    build: ./devconnector-app
+    command: npm start
+    ports:
+      - 5000:5000
+    volumes:
+      - ./devconnector-app:/usr/src/app
+      - app_modules:/usr/src/app/node_modules
+
+
+
+
+volumes:
+  api_modules:
+  app_modules: 

@@ -1,0 +1,8 @@
+[submodule "devconnector-api"]
+	path = devconnect-api
+	url = git@github.com:caesarbell/devconnector-api.git
+	branch = develop
+[submodule "devconnector-app"]
+	path = devconnector-app
+	url = git@github.com:caesarbell/devconnector-app.git
+	branch = develop
