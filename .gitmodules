@@ -1,5 +1,5 @@
 [submodule "devconnector-api"]
-	path = devconnect-api
+	path = devconnector-api
 	url = git@github.com:caesarbell/devconnector-api.git
 	branch = develop
 [submodule "devconnector-app"]

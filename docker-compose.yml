@@ -5,7 +5,7 @@ services:
     build: ./devconnector-api
     commnd: npm run dev
     ports: 
-      - 3000:3000
+      - 5000:5000
     volumes: 
       - ./devconnector-api:/usr/src/app
       - api_modules:/usr/src/app/node_modules
@@ -14,7 +14,7 @@ services:
     build: ./devconnector-app
     command: npm start
     ports:
-      - 5000:5000
+      - 3000:3000
     volumes:
       - ./devconnector-app:/usr/src/app
       - app_modules:/usr/src/app/node_modules
