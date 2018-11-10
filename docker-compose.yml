@@ -2,6 +2,7 @@ version: '3'
 
 services: 
   devconnector-api:
+    container_name: devconnector-api
     build: ./devconnector-api
     command: npm run dev
     env_file: ./devconnector-api/.env
@@ -12,6 +13,7 @@ services:
       - api_modules:/usr/src/app/node_modules
 
   devconnector-app:
+    container_name: devconnector-app
     build: ./devconnector-app
     command: npm start
     ports:
@@ -19,6 +21,8 @@ services:
     volumes:
       - ./devconnector-app:/usr/src/app
       - app_modules:/usr/src/app/node_modules
+    external_links:
+      - devconnector-api
 
 
 
